@@ -68,7 +68,7 @@ const moviesService = {
     .then(() =>{
         Router.go("/")
     })
-}
+  },
 };
 
 export default moviesService;

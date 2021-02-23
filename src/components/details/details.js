@@ -23,7 +23,7 @@ const template = (data) => html`
                     : html`
                     ${data.isLiked 
                         ? html`<span class="enrolled-span">Liked ${data.totalLikes}</span>`
-                        : html`<a class="btn btn-primary" href="#">Like</a>`
+                        : html`<a class="btn btn-primary" href="/like/${data.id}">Like</a>`
                     }
                     `
                 }
