@@ -17,12 +17,15 @@ import Register from "./components/register/register.js";
 import Login from "./components/login/login.js";
 import Logout from "./components/logout/logout.js";
 import AddMovie from "./components/addMovie/addMovie.js"
+import Details from "./components/details/details.js"
 
 window.customElements.define("home-component", Home);
 window.customElements.define("register-component", Register);
 window.customElements.define("login-component", Login);
 window.customElements.define("logout-component", Logout);
 window.customElements.define("add-movie-component", AddMovie);
+window.customElements.define("details-component", Details);
+
 
 
 
@@ -64,4 +67,8 @@ router.setRoutes([
     path: "/add-movie",
     component: "add-movie-component",
   },
+  {
+    path:"/details/:id",
+    component:"details-component"
+  }
 ]);

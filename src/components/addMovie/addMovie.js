@@ -24,7 +24,6 @@ const template = (data) =>html`
 
 class AddMovie extends HTMLElement{
     connectedCallback(){
-        //bind ?
         const add = moviesService.addMovie
         Object.assign(this,{add})
         this.render()

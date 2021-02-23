@@ -8,7 +8,10 @@ const moviesService = {
     let f = await fetch(`${url}.json`);
     return f.json();
   },
-  async oneMovie(id) {},
+  async oneMovie(id) {
+      const f = await fetch(`${url}/${id}/.json`)
+      return f.json()
+  },
   addMovie(e) {
     e.preventDefault();
     
@@ -44,6 +47,18 @@ const moviesService = {
     })
 
   },
+  likeData(movie){
+      const likes = Object.keys(JSON.parse(movie.likes));
+      const email = authService.getData().email
+
+      const isLiked = likes.includes(email)
+      const totalLikes = likes.length
+
+      return {
+          isLiked,
+          totalLikes
+      }
+  }
 };
 
 export default moviesService;
