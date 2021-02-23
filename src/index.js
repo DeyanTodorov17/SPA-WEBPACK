@@ -19,6 +19,7 @@ import Logout from "./components/logout/logout.js";
 import AddMovie from "./components/addMovie/addMovie.js"
 import Details from "./components/details/details.js"
 import LikeMovie from "./components/likeMovie/likeMovie.js"
+import EditMovie from "./components/editMovie/editMovie.js"
 
 window.customElements.define("home-component", Home);
 window.customElements.define("register-component", Register);
@@ -27,6 +28,7 @@ window.customElements.define("logout-component", Logout);
 window.customElements.define("add-movie-component", AddMovie);
 window.customElements.define("details-component", Details);
 window.customElements.define("like-component", LikeMovie);
+window.customElements.define("edit-component", EditMovie);
 
 
 
@@ -76,5 +78,9 @@ router.setRoutes([
   {
     path:"/like/:id",
     component:"like-component"
+  },
+  {
+    path:"/edit/:id",
+    component:"edit-component"
   }
 ]);
