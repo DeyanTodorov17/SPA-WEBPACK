@@ -58,7 +58,17 @@ const moviesService = {
           isLiked,
           totalLikes
       }
-  }
+  },
+  deleteMovie(){
+    const {id} = this
+
+    fetch(`${url}/${id}/.json`,{
+        method:"DELETE"
+    })
+    .then(() =>{
+        Router.go("/")
+    })
+}
 };
 
 export default moviesService;

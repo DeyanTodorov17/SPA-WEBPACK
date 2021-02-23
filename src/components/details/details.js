@@ -17,7 +17,7 @@ const template = (data) => html`
                 <p>${data.description}</p>
                 ${data.isCreator 
                     ? html`                    
-                    <a class="btn btn-danger" href="#">Delete</a>
+                    <a class="btn btn-danger" href="#" @click=${data.deleteMovie}>Delete</a>
                     <a class="btn btn-warning" href="/edit/${data.id}">Edit</a>
                     `
                     : html`
@@ -41,8 +41,9 @@ class Details extends HTMLElement{
            
             const isCreator = authService.getData().email === movie.creator
             const {isLiked,totalLikes} = moviesService.likeData(movie)
+            const deleteMovie = moviesService.deleteMovie.bind(movie)
 
-            Object.assign(this,movie,{isCreator,isLiked,totalLikes})
+            Object.assign(this,movie,{isCreator,isLiked,totalLikes,deleteMovie})
             this.render()
         })
         
