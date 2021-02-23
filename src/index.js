@@ -4,9 +4,11 @@ import { Router } from "@vaadin/router";
 //partials
 import Navigation from "./components/navigation/navigation.js"
 import Footer from "./components/footer/footer.js"
+import Movies from "./components/movies/movies.js"
 
 window.customElements.define("navigation-component", Navigation);
 window.customElements.define("footer-component", Footer);
+window.customElements.define("movies-component", Movies)
 
 import Home from "./components/home/home.js";
 import Register from "./components/register/register.js";

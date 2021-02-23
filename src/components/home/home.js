@@ -11,7 +11,7 @@ const template = (data) => html`
    </div> 
   ${data.isAuthenticated 
     ? html`
-    
+        <movies-component></movies-component>
     ` 
     : ""
     }
