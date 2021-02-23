@@ -10,7 +10,7 @@ const authService = {
   },
   getData() {
     if (localStorage.getItem("user")) {
-      const email = JSON.parse(localStorage.getItem("user")).email
+      const email = JSON.parse(localStorage.getItem("user")).email;
       return {
         isAuthenticated: true,
         email,
@@ -33,17 +33,41 @@ const authService = {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
-        localStorage.setItem("user",JSON.stringify({
-            email: userCredential.user.email
-        }))
-        Router.go("/")
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            email: userCredential.user.email,
+          })
+        );
+        Router.go("/");
       })
       .catch((error) => {
-        alert(error.message)
-        Router.go("/")
+        //fix this!
+        alert(error.message);
+        Router.go("/");
       });
   },
-  login() {},
+  login(e) {
+    e.preventDefault();
+    const { email, password } = this.getForm(
+      e.target.parentElement,
+      "email",
+      "password"
+    );
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        localStorage.setItem(
+          "user",
+          JSON.stringify({
+            email: userCredential.user.email,
+          })
+        );
+        Router.go("/");
+      });
+  },
   logout() {},
 };
 
