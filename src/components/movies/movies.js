@@ -4,7 +4,7 @@ import moviesService from "/Users/1/Desktop/Js applications/webpack-workshop/src
 const template = (data) => html`
   <h1 class="text-center">Movies</h1>
   <section>
-    <a href="#" class="btn btn-warning ">Add Movie</a>
+    <a href="/add-movie" class="btn btn-warning ">Add Movie</a>
     <form class="search float-right">
       <label>Search: </label>
       <input type="text" />
@@ -15,16 +15,15 @@ const template = (data) => html`
   <div class=" mt-3 ">
     <div class="row d-flex d-wrap">
       <div class="card-deck d-flex justify-content-center">
-        <div class="card mb-4">
+        
           ${data.movies.length
             ? html`${data.movies.map(
                 (movie) =>
-                  html`<one-movie-component
-                    .movie=${movie}
-                  ></one-movie-component>`
+                  html`<one-movie-component .movie=${movie}></one-movie-component>`
               )}`
-            : html`<h3>nqma</h3>`}
-        </div>
+            : html`<h3>No movies</h3>`
+            }
+        
       </div>
     </div>
   </div>
