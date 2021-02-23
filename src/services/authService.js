@@ -68,7 +68,7 @@ const authService = {
         Router.go("/");
       });
   },
-  logout() {},
+  logout(e) {},
 };
 
 export default authService;
