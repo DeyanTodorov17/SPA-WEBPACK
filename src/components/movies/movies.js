@@ -15,19 +15,21 @@ const template = (data) => html`
   <div class=" mt-3 ">
     <div class="row d-flex d-wrap">
       <div class="card-deck d-flex justify-content-center">
-        
           ${data.movies.length
             ? html`${data.movies.map(
                 (movie) =>
-                  html`<one-movie-component .movie=${movie}></one-movie-component>`
+                  html`
+                  <div class="card mb-4">
+                    <one-movie-component .movie=${movie}></one-movie-component>
+                    </div>
+                    `
               )}`
-            : html`<h3>No movies</h3>`
+              : html`<h3>No movies</h3>`
             }
-        
       </div>
     </div>
   </div>
-`;
+  `;
 
 class Movies extends HTMLElement {
   connectedCallback() {

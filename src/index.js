@@ -1,4 +1,5 @@
 import { Router } from "@vaadin/router";
+import "../static/css/site.css"
 
 
 //partials
@@ -6,11 +7,6 @@ import Navigation from "./components/navigation/navigation.js"
 import Footer from "./components/footer/footer.js"
 import Movie from "./components/oneMovie/oneMovie.js"
 import Movies from "./components/movies/movies.js"
-
-window.customElements.define("navigation-component", Navigation);
-window.customElements.define("footer-component", Footer);
-window.customElements.define("one-movie-component", Movie)
-window.customElements.define("movies-component", Movies);
 
 import Home from "./components/home/home.js";
 import Register from "./components/register/register.js";
@@ -20,6 +16,11 @@ import AddMovie from "./components/addMovie/addMovie.js"
 import Details from "./components/details/details.js"
 import LikeMovie from "./components/likeMovie/likeMovie.js"
 import EditMovie from "./components/editMovie/editMovie.js"
+
+window.customElements.define("navigation-component", Navigation);
+window.customElements.define("footer-component", Footer);
+window.customElements.define("one-movie-component", Movie)
+window.customElements.define("movies-component", Movies);
 
 window.customElements.define("home-component", Home);
 window.customElements.define("register-component", Register);

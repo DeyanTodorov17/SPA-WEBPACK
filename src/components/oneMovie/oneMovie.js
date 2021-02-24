@@ -1,16 +1,14 @@
 import { html, render } from "lit-html";
 
 const template = (data) =>html`
-    <div class="card mb-4">
-        <img class="card-img-top" src="${data.imageUrl}" alt="Card image cap" width="400">
+        <img class="card-img-top" src=${data.imageUrl} alt="Card image cap" width="400">
         <div class="card-body">
             <h4 class="card-title">${data.title}</h4>
         </div>
         <div class="card-footer">
             <a href="/details/${data.id}"><button type="button" class="btn btn-info">Details</button></a>
         </div>
-    </div>
-`
+    `
 
 class OneMovie extends HTMLElement{
     connectedCallback(){

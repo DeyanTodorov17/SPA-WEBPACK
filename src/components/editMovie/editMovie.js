@@ -26,8 +26,9 @@ const template = (data) => html`
 class EditMovie extends HTMLElement{
     connectedCallback(){
         const editMovie = moviesService.editMovie.bind(authService);
-        
-        moviesService.oneMovie(this.location.params.id)
+        const id = this.location.params.id
+
+        moviesService.oneMovie(id)
         .then(movie =>{
             Object.assign(this,movie,{editMovie})
             this.render()
