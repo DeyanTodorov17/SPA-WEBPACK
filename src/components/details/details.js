@@ -1,6 +1,6 @@
 import { html, render } from "lit-html";
-import moviesService from "/Users/1/Desktop/Js applications/webpack-workshop/src/services/moviesService.js";
-import authService from "/Users/1/Desktop/Js applications/webpack-workshop/src/services/authService.js";
+import moviesService from "../../services/moviesService.js"
+import authService from "../../services/authService.js"
 
 
 const template = (data) => html`

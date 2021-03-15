@@ -1,5 +1,5 @@
 import { html, render } from "lit-html";
-import moviesService from "/Users/1/Desktop/Js applications/webpack-workshop/src/services/moviesService.js";
+import moviesService from '../../services/moviesService.js';
 
 const template = (data) =>html`
     <navigation-component></navigation-component>

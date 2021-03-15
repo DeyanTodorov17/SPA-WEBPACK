@@ -1,5 +1,5 @@
 import { Router } from "@vaadin/router";
-import authService from "/Users/1/Desktop/Js applications/webpack-workshop/src/services/authService.js";
+import authService from "../../src/services/authService.js"
 
 const url = "https://movies-97408-default-rtdb.firebaseio.com/";
 
