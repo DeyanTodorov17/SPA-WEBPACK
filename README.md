@@ -9,6 +9,10 @@
   
   If you add a movie you are creator of this movie. So you can delete and edit it. Noone else can do it.
   If you aren't a creator of a movie you can like a movie once and after that you can see number of total likes of this movie.
+
+  Get started: 
+    1.npm install
+    2. npm start.
   
   
   
