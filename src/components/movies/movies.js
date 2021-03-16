@@ -5,11 +5,6 @@ const template = (data) => html`
   <h1 class="text-center">Movies</h1>
   <section>
     <a href="/add-movie" class="btn btn-warning ">Add Movie</a>
-    <form class="search float-right">
-      <label>Search: </label>
-      <input type="text" />
-      <input type="submit" class="btn btn-info" value="Search" />
-    </form>
   </section>
 
   <div class=" mt-3 ">
